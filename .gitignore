@@ -1,0 +1,33 @@
+# This file is used to ignore files and directories in a Git repository
+# It is a plain text file that tells Git which files or directories to ignore
+# when committing changes to the repository.
+# The patterns in this file are matched against the file names in the repository.
+# Lines starting with '#' are comments and are ignored by Git.
+# The following lines are examples of patterns that can be used in the .gitignore file:
+
+# Ignore all files with the .log extension
+*.log
+# Ignore all files with the .tmp extension
+*.tmp
+# Ignore all files in the temp directory
+temp/
+# Ignore all files in the build directory
+#build/  
+# Ignore all files in the dist directory
+dist/
+# Ignore all files in the node_modules directory
+#node_modules/   
+# Ignore all files in the .vscode directory
+.vscode/    
+# Ignore all files in the .idea directory
+.idea/
+# Ignore all files in the .DS_Store directory
+# .DS_Store   
+
+# Ignore all files in the .env file
+.env
+# Ignore all files in the .env.local file
+.env.local
+
+# Ignore all files in the .gitattributes file
+.gitattributes
