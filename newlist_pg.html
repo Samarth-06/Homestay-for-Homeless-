@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PG & Mess Listings - H&H Homestays</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">H&H Homestays</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="newlist_pg.html">Homestays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newabout.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newcontact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newfeedback.html">Feedback</a>
+            </li>
+            <li class="nav-item cta">
+              <a class="nav-link" href="newaddpg.html"><span>Add Homestay</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
+  <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1052&q=80');">
+    <div class="container">
+      <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="mb-5 element-animate">
+            <h1>Our Homestays</h1>
+            <p>Discover comfortable and affordable PGs in Akurdi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="site-section">
+    <div class="container">
+      <div class="filters mb-5">
+        <input type="text" id="searchBox" placeholder="Search by Name (A-Z)" oninput="applyFilters()">
+        <input type="text" id="areaFilter" placeholder="Search Area" oninput="applyFilters()">
+        <select id="genderFilter" onchange="applyFilters()">
+          <option value="">Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Unisex">Unisex</option>
+        </select>
+        <select id="messFilter" onchange="applyFilters()">
+          <option value="">Mess Facility</option>
+          <option value="Yes">Available</option>
+          <option value="No">Not Available</option>
+        </select>
+        <input type="text" id="rentFilter" placeholder="Max Rent (₹)" oninput="applyFilters()">
+        <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
+      </div>
+      <div class="row" id="listingContainer"></div>
+    </div>
+  </section>
+  <section class="section-cover" data-stellar-background-ratio="0.5" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1052&q=80');">
+    <div class="container">
+      <div class="row justify-content-center align-items-center intro">
+        <div class="col-md-9 text-center element-animate">
+          <h2>Comfortable Living Awaits</h2>
+          <p class="lead mb-5">Find your perfect PG with all the amenities you need for a hassle-free stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-4">
+          <h3>Phone Support</h3>
+          <p>24/7 Call us now.</p>
+          <p class="lead"><a href="tel://+919168219293">+91 9168219293</a></p>
+        </div>
+        <div class="col-md-4">
+          <h3>Connect With Us</h3>
+          <p>We are socialized. Follow us</p>
+          <p>
+            <a href="#" class="pl-0 p-3"><span class="fa fa-facebook"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-twitter"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-instagram"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-vimeo"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-youtube-play"></span></a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Newsletter</h3>
+          <p>Subscribe for updates</p>
+          <form action="#" class="subscribe">
+            <div class="form-group">
+              <button type="submit"><span class="ion-ios-arrow-thin-right"></span></button>
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-7 text-center">
+          © 2025 H&H Homestays | <a href="#privacy">Privacy Policy</a> | <a href="newcontact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/magnific-popup-options.js"></script>
+  <script src="js/main.js"></script>
+  <style>
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .filters input,
+    .filters select {
+      flex: 1;
+      min-width: 150px;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      color: #333;
+      font-size: 14px;
+    }
+    .clear-filters {
+      background-color: #f44336;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+    .clear-filters:hover {
+      background-color: #d32f2f;
+    }
+    .room-specs li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .room-specs li i {
+      margin-right: 8px;
+      color: #ff4d4d;
+    }
+    .room {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .room:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    .room img {
+      border-radius: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #ff4d4d, #cc0000);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 77, 77, 0.5);
+    }
+    @media (max-width: 768px) {
+      .filters {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script>
+    const allListings = [
+      { name: 'Samruddhi Hostel', area: 'Pimpri Chinchwad', rent: 6000, gender: 'Female', mess: 'Yes', image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+      { name: 'PG Hostel for Girls', area: 'Pimpri Chinchwad', rent: 4200, gender: 'Female', mess: 'No', image: 'images/Aai Boys Hostel PG_2.PNG' },
+      { name: 'Sai Sadan Boys PG', area: 'Akurdi', rent: 4000, gender: 'Male', mess: 'Yes', image: 'images/sai sadan boys pg.jpg' },
+      { name: 'Om Sai Boys PG', area: 'Akurdi', rent: 6000, gender: 'Male', mess: 'No', image: 'images/Om Sai Boys PG.jpeg' },
+      { name: 'Krishna Girls PG', area: 'Akurdi', rent: 3500, gender: 'Female', mess: 'Yes', image: 'images/SR PG and Guest House_2.PNG' },
+      { name: 'Matru Chhaya', area: 'Pimpri Chinchwad', rent: 3500, gender: 'Female', mess: 'Yes', image: 'images/Matruchhaya Niwas.PNG' },
+      { name: 'Elite Boys PG', area: 'Pradhikaran', rent: 6800, gender: 'Male', mess: 'Yes', image: 'images/SR PG2.jpeg' },
+      { name: 'Sudhir Kadam Single Rooms', area: 'Pimpri Chinchwad', rent: 4500, gender: 'Male', mess: 'No', image: 'https://images.pexels.com/photos/259593/pexels-photo-259593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+      { name: 'Shree Swami Samarth PG', area: 'Akurdi', rent: 5500, gender: 'Female', mess: 'Yes', image: 'https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+      { name: 'SR PG and Guest House', area: 'Nigdi', rent: 7500, gender: 'Male', mess: 'No', image: 'images/SR PG.jpeg' },
+      { name: 'Aai Boys Hostel PG', area: 'Pimpri Chinchwad', rent: 5800, gender: 'Male', mess: 'Yes', image: 'images/Aai Boys Hostel PG_1.PNG' },
+      { name: 'Yash PG House', area: 'Pradhikaran', rent: 8000, gender: 'Male', mess: 'Yes', image: 'images/Yash PG House_1.PNG' },
+      { name: 'Boys Hostel PG Ravet', area: 'Ravet', rent: 5500, gender: 'Male', mess: 'No', image: 'images/IntelliHOST Boys Hostel Ravet.PNG' }
+    ];
+    function renderListings(listings) {
+      const container = document.getElementById("listingContainer");
+      container.innerHTML = "";
+      listings.forEach(listing => {
+        const div = document.createElement("div");
+        div.className = "col-md-4 mb-4";
+        div.innerHTML = `
+          <div class="media d-block room mb-0">
+            <figure>
+              <img src="${listing.image}" alt="${listing.name}" class="img-fluid">
+              <div class="overlap-text">
+                <span>
+                  Featured PG
+                  <span class="ion-ios-star"></span>
+                  <span class="ion-ios-star"></span>
+                  <span class="ion-ios-star"></span>
+                </span>
+              </div>
+            </figure>
+            <div class="media-body">
+              <h3 class="mt-0"><a href="newpgdetails.html?pg=${encodeURIComponent(listing.name)}">${listing.name}</a></h3>
+              <ul class="room-specs">
+                <li><i class="fa fa-map-marker"></i> ${listing.area}</li>
+                <li><i class="fa fa-inr"></i> ₹${listing.rent}/month</li>
+                <li><i class="fa fa-users"></i> ${listing.gender}</li>
+                <li><i class="fa fa-cutlery"></i> Mess: ${listing.mess}</li>
+              </ul>
+              <p>Comfortable living with essential amenities in ${listing.area}.</p>
+              <p><a href="newpgdetails.html?pg=${encodeURIComponent(listing.name)}" class="btn btn-primary btn-sm">View Details</a></p>
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+    function applyFilters() {
+      const area = document.getElementById("areaFilter").value.toLowerCase();
+      const gender = document.getElementById("genderFilter").value;
+      const mess = document.getElementById("messFilter").value;
+      const rent = parseInt(document.getElementById("rentFilter").value);
+      const searchQuery = document.getElementById("searchBox").value.toLowerCase();
+      let filteredListings = allListings.filter(listing => {
+        const matchesSearch = !searchQuery || listing.name.toLowerCase().includes(searchQuery);
+        const matchesArea = !area || listing.area.toLowerCase().includes(area);
+        const matchesGender = !gender || listing.gender.toLowerCase() === gender.toLowerCase();
+        const matchesMess = !mess || listing.mess.toLowerCase() === mess.toLowerCase();
+        const matchesRent = isNaN(rent) || listing.rent <= rent;
+        return matchesSearch && matchesArea && matchesGender && matchesMess && matchesRent;
+      });
+      filteredListings.sort((a, b) => a.name.localeCompare(b.name));
+      renderListings(filteredListings);
+    }
+    function clearFilters() {
+      document.getElementById("searchBox").value = "";
+      document.getElementById("areaFilter").value = "";
+      document.getElementById("genderFilter").value = "";
+      document.getElementById("messFilter").value = "";
+      document.getElementById("rentFilter").value = "";
+      renderListings(allListings);
+    }
+    renderListings(allListings);
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'934649a75d7dda9b',t:'MTc0NTMzNzE0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

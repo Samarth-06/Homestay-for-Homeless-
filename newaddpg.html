@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Add Homestay - H&H</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">H&H Homestays</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newlist_pg.html">Homestays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newabout.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newcontact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newfeedback.html">Feedback</a>
+            </li>
+            <li class="nav-item cta">
+              <a class="nav-link active" href="newaddpg.html"><span>Add Homestay</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="1.7" style="background-image: url(images/addhomestay.jpg);">
+    <div class="container">
+      <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="mb-5 element-animate">
+            <h1>Add Your Homestay</h1>
+            <p>List your PG with H&H Homestays for easy bookings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="mb-5">Homestay Submission Form</h2>
+          <form id="pg-form">
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="pg-name">Homestay Name</label>
+                <input type="text" id="pg-name" class="form-control" placeholder="E.g., Sunshine Homestay">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="pg-address">Address</label>
+                <textarea id="pg-address" class="form-control" placeholder="Full address in Pune" rows="4"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="pg-contact">Contact Number</label>
+                <input type="tel" id="pg-contact" class="form-control" placeholder="E.g., +91 9876543210">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="pg-amenities">Amenities</label>
+                <textarea id="pg-amenities" class="form-control" placeholder="E.g., Wi-Fi, Meals, Laundry" rows="4"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="pg-price">Monthly Price (₹)</label>
+                <input type="number" id="pg-price" class="form-control" placeholder="E.g., 8000">
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="pg-gender">Gender</label>
+                <select id="pg-gender" class="form-control">
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Unisex">Unisex</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="pg-image">Upload Image (Optional)</label>
+                <input type="file" id="pg-image" class="form-control" accept="image/*">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="submit" value="Submit Homestay" class="btn btn-primary">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <h3 class="mb-5">Submitted Homestays</h3>
+          <div id="pg-list" class="pg-list"></div>
+          <div id="no-pgs" class="no-pgs">No homestays yet. Add yours!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-cover" data-stellar-background-ratio="0.5" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1052&q=80');">
+    <div class="container">
+      <div class="row justify-content-center align-items-center intro">
+        <div class="col-md-9 text-center element-animate">
+          <h2>Join Our Community</h2>
+          <p class="lead mb-5">List your PG and connect with students and professionals looking for comfortable stays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-4">
+          <h3>Phone Support</h3>
+          <p>24/7 Call us now.</p>
+          <p class="lead"><a href="tel://+919168219293">+91 9168219293</a></p>
+        </div>
+        <div class="col-md-4">
+          <h3>Connect With Us</h3>
+          <p>We are socialized. Follow us</p>
+          <p>
+            <a href="#" class="pl-0 p-3"><span class="fa fa-facebook"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-twitter"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-instagram"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-vimeo"></span></a>
+            <a href="#" class="p-3"><span class="fa fa-youtube-play"></span></a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h3>Connect With Us</h3>
+          <p>Subscribe to our newsletter for updates.</p>
+          <form action="#" class="subscribe">
+            <div class="form-group">
+              <button type="submit"><span class="ion-ios-arrow-thin-right"></span></button>
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-7 text-center">
+          © 2025 H&H. Made with ❤ by Apoorv, Samarth, Nida & Adarsh.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/magnific-popup-options.js"></script>
+  <script src="js/main.js"></script>
+
+  <style>
+    .form-group label {
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .form-control {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      color: #333;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+    .form-control:focus {
+      border-color: #ff4d4d;
+      background-color: #fff;
+      outline: none;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #ff4d4d, #cc0000);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 77, 77, 0.5);
+    }
+    .pg-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .pg {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 3px solid #ff4d4d;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pg:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    .pg img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .pg p {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0;
+    }
+    .no-pgs {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #ff4d4d;
+      text-align: center;
+    }
+    .delete-button {
+      background: #cc0000;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .delete-button:hover {
+      background: #b30000;
+      transform: scale(1.1);
+    }
+    @media (max-width: 768px) {
+      .pg-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    const form = document.getElementById('pg-form');
+    const pgList = document.getElementById('pg-list');
+    const noPgs = document.getElementById('no-pgs');
+    let pgs = JSON.parse(localStorage.getItem('pgs')) || [];
+    let devMode = false;
+
+    form.addEventListener('submit', handleSubmit);
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const nameInput = document.getElementById('pg-name').value.trim();
+      const addressInput = document.getElementById('pg-address').value.trim();
+      const contactInput = document.getElementById('pg-contact').value.trim();
+      const amenitiesInput = document.getElementById('pg-amenities').value.trim();
+      const priceInput = document.getElementById('pg-price').value.trim();
+      const genderInput = document.getElementById('pg-gender').value;
+      const imageInput = document.getElementById('pg-image').files[0];
+
+      if (nameInput && addressInput && contactInput && amenitiesInput && priceInput && genderInput) {
+        const newPg = {
+          name: nameInput,
+          address: addressInput,
+          contact: contactInput,
+          amenities: amenitiesInput,
+          price: parseInt(priceInput),
+          gender: genderInput,
+          image: imageInput ? URL.createObjectURL(imageInput) : null
+        };
+        pgs.push(newPg);
+        localStorage.setItem('pgs', JSON.stringify(pgs.map(pg => ({ ...pg, image: null }))));
+        displayPgs();
+        form.reset();
+        alert('Homestay submitted! Contact us at apoorvarora2006@gmail.com or +91 9168219293 for verification.');
+      } else {
+        alert('Please fill all required fields.');
+      }
+    }
+
+    function displayPgs() {
+      pgList.innerHTML = '';
+      if (pgs.length === 0) {
+        noPgs.style.display = 'block';
+      } else {
+        noPgs.style.display = 'none';
+        pgs.forEach((pg, index) => {
+          const pgDiv = document.createElement('div');
+          pgDiv.classList.add('pg');
+          pgDiv.innerHTML = `
+            <h3>${pg.name}</h3>
+            <p><strong>Address:</strong> ${pg.address}</p>
+            <p><strong>Contact:</strong> ${pg.contact}</p>
+            <p><strong>Amenities:</strong> ${pg.amenities}</p>
+            <p><strong>Price:</strong> ₹${pg.price}/month</p>
+            <p><strong>Gender:</strong> ${pg.gender}</p>
+            ${pg.image ? `<img src="${pg.image}" alt="${pg.name}">` : ''}
+          `;
+          if (devMode) {
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('delete-button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.onclick = () => {
+              if (confirm('Delete this homestay?')) {
+                pgs.splice(index, 1);
+                localStorage.setItem('pgs', JSON.stringify(pgs.map(pg => ({ ...pg, image: null }))));
+                displayPgs();
+                alert('Homestay deleted!');
+              }
+            };
+            pgDiv.appendChild(deleteButton);
+          }
+          pgList.appendChild(pgDiv);
+        });
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.shiftKey && e.key.toLowerCase() === 'd') {
+        devMode = !devMode;
+        alert('Developer Mode ' + (devMode ? 'ON 🔓' : 'OFF 🔒'));
+        displayPgs();
+      }
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'x') {
+        if (confirm('Clear ALL homestays?')) {
+          localStorage.removeItem('pgs');
+          pgs.length = 0;
+          displayPgs();
+          alert('All homestays cleared 🧹');
+        }
+      }
+    });
+
+    displayPgs();
+  </script>
+</body>
+</html>
